@@ -79,7 +79,7 @@ const Consultants = () => {
                 className="gradient-accent text-accent-foreground font-semibold hover-lift"
               >
                 <Link to="/contact" className="flex items-center space-x-2">
-                  <span>Get Your Free Audit</span>
+                  <span>Get Your Free Strategy Session</span>
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
@@ -254,7 +254,7 @@ const Consultants = () => {
               className="font-semibold hover-lift"
             >
               <Link to="/contact" className="flex items-center space-x-2">
-                <span>Start Your Free Audit</span>
+                <span>Get Your Free Strategy Session</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>

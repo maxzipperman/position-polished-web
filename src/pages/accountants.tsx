@@ -79,7 +79,7 @@ const Accountants = () => {
                 className="gradient-accent text-accent-foreground font-semibold hover-lift"
               >
                 <Link to="/contact" className="flex items-center space-x-2">
-                  <span>Get Your Free Audit</span>
+                  <span>Book Your 20-Min Discovery Call</span>
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
@@ -254,7 +254,7 @@ const Accountants = () => {
               className="font-semibold hover-lift"
             >
               <Link to="/contact" className="flex items-center space-x-2">
-                <span>Start Your Free Audit</span>
+                <span>Book Your 20-Min Discovery Call</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>

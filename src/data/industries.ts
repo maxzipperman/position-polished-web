@@ -7,8 +7,8 @@ export const professionalServicesData: IndustryData = {
   hero: {
     headline: "Websites that Win Trust — and Clients",
     subheadline: "We help professional services turn outdated, slow sites into credibility-driving, lead-generating assets.",
-    primaryCtaText: "Request a Free Audit",
-    secondaryCtaText: "See Before/After"
+    primaryCtaText: "Speak With the Founder",
+    secondaryCtaText: "Get Your Free Strategy Session"
   },
   whyMatters: [
     "First impressions happen in seconds — and your website is your handshake.",
@@ -77,7 +77,7 @@ export const professionalServicesData: IndustryData = {
   endCta: {
     heading: "Ready to Attract Higher-Value Clients?",
     subheading: "Let's make your website your most trusted salesperson.",
-    primaryCtaText: "Book a Consultation"
+    primaryCtaText: "Speak With the Founder"
   },
   seo: {
     title: "Position Digital — High-Performance Websites for Professional Services",
@@ -93,7 +93,7 @@ export const localBusinessData: IndustryData = {
   hero: {
     headline: "Local Websites That Drive Foot Traffic",
     subheadline: "We build fast, mobile-first websites that help local businesses get found and chosen by nearby customers.",
-    primaryCtaText: "Get Local Visibility",
+    primaryCtaText: "Book Your 20-Min Discovery Call",
     secondaryCtaText: "View Success Stories"
   },
   whyMatters: [
@@ -179,7 +179,7 @@ export const nonprofitData: IndustryData = {
   hero: {
     headline: "Websites That Inspire Action",
     subheadline: "We help nonprofits build compelling digital experiences that turn visitors into donors, volunteers, and advocates.",
-    primaryCtaText: "Increase Donations",
+    primaryCtaText: "Get Your Free Strategy Session",
     secondaryCtaText: "See Impact Stories"
   },
   whyMatters: [
@@ -265,7 +265,7 @@ export const creativesData: IndustryData = {
   hero: {
     headline: "Portfolios That Win Clients",
     subheadline: "We build stunning, fast-loading portfolio sites that showcase your work and convert visitors into high-paying clients.",
-    primaryCtaText: "Showcase Your Work",
+    primaryCtaText: "Speak With the Founder",
     secondaryCtaText: "View Portfolio Examples"
   },
   whyMatters: [

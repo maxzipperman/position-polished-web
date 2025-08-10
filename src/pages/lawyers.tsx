@@ -79,7 +79,7 @@ const Lawyers = () => {
                 className="gradient-accent text-accent-foreground font-semibold hover-lift"
               >
                 <Link to="/contact" className="flex items-center space-x-2">
-                  <span>Get Your Free Audit</span>
+                  <span>Speak With the Founder</span>
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
@@ -255,7 +255,7 @@ const Lawyers = () => {
               className="font-semibold hover-lift"
             >
               <Link to="/contact" className="flex items-center space-x-2">
-                <span>Start Your Free Audit</span>
+                <span>Speak With the Founder</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>

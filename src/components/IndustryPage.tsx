@@ -6,14 +6,36 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './
 import { BeforeAfterSlider } from './ui/before-after-slider';
 import { Badge } from './ui/badge';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Zap, Shield, TrendingUp, ArrowRight } from 'lucide-react';
+import { CheckCircle, Zap, Shield, TrendingUp, ArrowRight, Star } from 'lucide-react';
 import { IndustryData } from '@/types/industry';
+import { FounderCTA } from './FounderCTA';
+import { AnimatedStats } from './AnimatedStats';
+import { IndustryHero } from './IndustryHero';
+import performanceMetrics from '@/assets/performance-metrics.jpg';
 
 interface IndustryPageProps {
   data: IndustryData;
 }
 
 export const IndustryPage = ({ data }: IndustryPageProps) => {
+  // Convert proof points to animated stats format
+  const statsData = data.proof.map((point, index) => {
+    const match = point.match(/(\d+%|\d+×|\d+s)/);
+    const value = match ? match[1] : `${index + 1}x`;
+    return {
+      value,
+      label: point.replace(/(\d+%|\d+×|\d+s)/, '').trim(),
+      description: point
+    };
+  });
+
+  // Determine CTA variant based on primary CTA text
+  const getCtaVariant = () => {
+    if (data.hero.primaryCtaText.includes('Founder')) return 'primary';
+    if (data.hero.primaryCtaText.includes('20-Min')) return 'secondary';
+    return 'value-first';
+  };
+
   return (
     <>
       <Helmet>
@@ -34,30 +56,14 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
       </Helmet>
 
       <Layout>
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-background via-background to-primary/5 py-20 lg:py-32">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="outline" className="mb-6 text-primary border-primary/20">
-                {data.industry}
-              </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-                {data.hero.headline}
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-                {data.hero.subheadline}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                  <Link to="/contact">{data.hero.primaryCtaText}</Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link to="#case-studies">{data.hero.secondaryCtaText}</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Enhanced Hero Section */}
+        <IndustryHero 
+          industry={data.industry}
+          headline={data.hero.headline}
+          subheadline={data.hero.subheadline}
+          primaryCtaText={data.hero.primaryCtaText}
+          secondaryCtaText={data.hero.secondaryCtaText}
+        />
 
         {/* Why This Matters */}
         <section className="py-20 bg-muted/30">
@@ -78,24 +84,27 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
           </div>
         </section>
 
-        {/* Proof Points */}
+        {/* Animated Proof Points */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12">Proven Results</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {data.proof.map((point, index) => {
-                  const icons = [Zap, Shield, TrendingUp];
-                  const Icon = icons[index % icons.length];
-                  return (
-                    <Card key={index} className="text-center">
-                      <CardContent className="p-6">
-                        <Icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                        <p className="font-medium">{point}</p>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4">Proven Results</h2>
+                <p className="text-lg text-muted-foreground">Real performance improvements for businesses like yours</p>
+              </div>
+              <AnimatedStats stats={statsData} />
+              
+              {/* Performance Metrics Visual */}
+              <div className="mt-16 max-w-4xl mx-auto">
+                <Card className="overflow-hidden shadow-large border-0">
+                  <CardContent className="p-0">
+                    <img 
+                      src={performanceMetrics} 
+                      alt="Website performance improvements"
+                      className="w-full h-auto"
+                    />
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -171,17 +180,38 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
           </div>
         </section>
 
-        {/* Testimonial */}
+        {/* Enhanced Testimonial */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <blockquote className="text-2xl md:text-3xl font-medium mb-8 text-foreground">
-                "{data.testimonial.quote}"
-              </blockquote>
-              <div>
-                <p className="font-semibold">{data.testimonial.author}</p>
-                <p className="text-muted-foreground">{data.testimonial.role}</p>
-              </div>
+            <div className="max-w-4xl mx-auto">
+              <Card className="text-center shadow-accent border-0 bg-gradient-subtle">
+                <CardContent className="p-12">
+                  <div className="flex justify-center mb-6">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <blockquote className="text-2xl md:text-3xl font-medium mb-8 text-foreground">
+                    "{data.testimonial.quote}"
+                  </blockquote>
+                  <div>
+                    <p className="font-semibold text-lg">{data.testimonial.author}</p>
+                    <p className="text-muted-foreground">{data.testimonial.role}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Founder CTA Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <FounderCTA 
+                ctaText={data.hero.primaryCtaText}
+                variant={getCtaVariant()}
+              />
             </div>
           </div>
         </section>
