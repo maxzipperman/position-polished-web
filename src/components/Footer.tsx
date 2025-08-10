@@ -4,10 +4,10 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const industries = [
-    { name: 'Professional Services', href: '/professional-services' },
     { name: 'Local Businesses', href: '/local-businesses' },
     { name: 'Nonprofits & Religious', href: '/nonprofits' },
     { name: 'Independent Creatives', href: '/creatives' },
+    { name: 'Professional Services', href: '/professional-services' },
   ];
 
   return (

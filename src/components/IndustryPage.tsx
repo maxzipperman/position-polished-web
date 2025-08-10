@@ -6,12 +6,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './
 import { BeforeAfterSlider } from './ui/before-after-slider';
 import { Badge } from './ui/badge';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Zap, Shield, TrendingUp, ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import { IndustryData } from '@/types/industry';
 import { FounderCTA } from './FounderCTA';
 import { AnimatedStats } from './AnimatedStats';
 import { IndustryHero } from './IndustryHero';
 import { IndustryIcon } from './IndustryIcon';
+import { iconResolver } from '@/utils/iconResolver';
 import performanceMetrics from '@/assets/performance-metrics.jpg';
 
 interface IndustryPageProps {
@@ -76,7 +77,7 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
                 {data.whyMatters.map((point, index) => (
                   <Card key={index} className="border-0 shadow-sm">
                     <CardContent className="p-6">
-                      <IndustryIcon name={data.icon} className="h-8 w-8 text-primary mb-4" />
+                      <IndustryIcon name={iconResolver(point, data.industry)} className="h-8 w-8 text-primary mb-4" />
                       <p className="text-muted-foreground">{point}</p>
                     </CardContent>
                   </Card>
@@ -95,7 +96,7 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
                 {(data.valueProps ?? data.servicesFocus).map((val, idx) => (
                   <Card key={idx} className="border-0 shadow-sm">
                     <CardContent className="p-6">
-                      <IndustryIcon name={data.icon} className="h-6 w-6 text-primary mb-3" />
+                      <IndustryIcon name={iconResolver(val, data.industry)} className="h-6 w-6 text-primary mb-3" />
                       <p className="text-sm">{val}</p>
                     </CardContent>
                   </Card>
@@ -139,7 +140,7 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {data.servicesFocus.map((service, index) => (
                   <div key={index} className="flex items-center space-x-3 p-4 bg-background rounded-lg">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <IndustryIcon name={iconResolver(service, data.industry)} className="h-5 w-5 text-primary flex-shrink-0" />
                     <span className="text-sm">{service}</span>
                   </div>
                 ))}

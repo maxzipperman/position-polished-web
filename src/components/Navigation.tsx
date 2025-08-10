@@ -14,10 +14,10 @@ const Navigation = () => {
   const location = useLocation();
 
   const industries = [
-    { name: 'Professional Services', href: '/professional-services' },
     { name: 'Local Businesses', href: '/local-businesses' },
     { name: 'Nonprofits & Religious', href: '/nonprofits' },
     { name: 'Independent Creatives', href: '/creatives' },
+    { name: 'Professional Services', href: '/professional-services' },
   ];
 
   const isActive = (path: string) => location.pathname === path;

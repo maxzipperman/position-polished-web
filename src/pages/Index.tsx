@@ -111,12 +111,6 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Professional Services",
-                description: "Build credibility and attract higher-value clients",
-                href: "/professional-services",
-                icon: <Globe className="h-8 w-8 text-accent" />
-              },
-              {
                 title: "Local Businesses", 
                 description: "Drive bookings and dominate local search",
                 href: "/local-businesses",
@@ -133,6 +127,12 @@ const Index = () => {
                 description: "Showcase your work and book more clients",
                 href: "/creatives", 
                 icon: <Star className="h-8 w-8 text-accent" />
+              },
+              {
+                title: "Professional Services",
+                description: "Build credibility and attract higher-value clients",
+                href: "/professional-services",
+                icon: <Globe className="h-8 w-8 text-accent" />
               }
             ].map((industry, index) => (
               <Card key={index} className="hover-lift shadow-soft group cursor-pointer">
