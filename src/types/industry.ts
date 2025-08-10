@@ -59,5 +59,7 @@ export interface IndustryData {
     description: string;
     keywords: string[];
   };
+  offers?: { name: string; description: string; points: string[] }[];
+  gtm?: { title: string; points: string[] };
   comparison?: ComparisonTableData;
 }

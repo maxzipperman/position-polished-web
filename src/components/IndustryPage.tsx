@@ -151,6 +151,53 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
           </div>
         </section>
 
+        {/* Offer Architecture */}
+        {data.offers?.length ? (
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="max-w-5xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-12">Offer Architecture</h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {data.offers.map((offer, idx) => (
+                    <Card key={idx} className="border-0 shadow-sm">
+                      <CardHeader>
+                        <CardTitle className="text-xl">{offer.name}</CardTitle>
+                        <p className="text-muted-foreground">{offer.description}</p>
+                      </CardHeader>
+                      <CardContent>
+                        <ul className="list-disc pl-5 space-y-2 text-sm text-muted-foreground">
+                          {offer.points.map((p, i) => (
+                            <li key={i}>{p}</li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        {/* Go-To-Market Quick Hits */}
+        {data.gtm ? (
+          <section className="py-20 bg-muted/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-6">
+                  <Badge variant="secondary" className="mb-2">{data.gtm.title}</Badge>
+                  <h2 className="text-3xl font-bold">Go-To-Market Quick Hits</h2>
+                </div>
+                <ul className="max-w-3xl mx-auto list-disc pl-6 space-y-3 text-muted-foreground">
+                  {data.gtm.points.map((pt, idx) => (
+                    <li key={idx}>{pt}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         {/* Who We Serve */}
         {data.subProfessions?.length ? (
           <section className="py-20">

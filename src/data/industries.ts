@@ -8,8 +8,8 @@ export const professionalServicesData: IndustryData = {
   hero: {
     headline: "Websites that Win Trust — and Clients",
     subheadline: "We help professional services turn outdated, slow sites into credibility-driving, lead-generating assets.",
-    primaryCtaText: "Speak With the Founder",
-    secondaryCtaText: "Get Your Free Strategy Session"
+    primaryCtaText: "Request a 5-min Loom Site Review",
+    secondaryCtaText: "See Accountant Results"
   },
   whyMatters: [
     "First impressions happen in seconds — and your website is your handshake.",
@@ -38,6 +38,49 @@ export const professionalServicesData: IndustryData = {
     "ADA-conscious, WCAG 2.1-friendly design",
     "No plugins = no maintenance retainers"
   ],
+  offers: [
+    {
+      name: "Strategy Sprint (2 weeks)",
+      description: "Brand voice, homepage wire, CTA map, SEO outline — paid upfront to anchor a premium build.",
+      points: [
+        "Brand voice guide + messaging hierarchy",
+        "Homepage wireframe and hero copy",
+        "CTA map + intake flow recommendations (Calendly included)",
+        "SEO outline and page architecture"
+      ]
+    },
+    {
+      name: "Launch Build (3–5 pages)",
+      description: "Hand-coded, speed-first site with copy included. Priced to match your premium custom service.",
+      points: [
+        "Custom design, no templates; sub-1.5s LCP target",
+        "Compliance-minded forms + local SEO schema",
+        "Copywriting included for core pages",
+        "Recommended pricing: $6,000–$9,500 for 'Brand Refresh Website'"
+      ]
+    },
+    {
+      name: "Care & Content",
+      description: "Light maintenance with quarterly updates so the site improves over time.",
+      points: [
+        "Quarterly content and UX updates",
+        "Security patches and uptime monitoring",
+        "Optional analytics reviews and recommendations"
+      ]
+    }
+  ],
+  gtm: {
+    title: "Accountants Are Our Premier Market",
+    points: [
+      "Prioritize Accountants: largest accessible market with budget and clear pain points",
+      "Lead with Value: open with a personalized 5‑min Loom mini-audit (2 fixes + call ask)",
+      "Pricing: stop undercutting — position custom builds at $6k–$9.5k to attract serious clients",
+      "Automation Stack: HubSpot (CRM) + Apollo.io (sourcing) + Instantly.ai (outreach)",
+      "Channels: LinkedIn outreach for pros; Facebook/community groups for local creators",
+      "Messaging Split: Pros = 'Credibility Engine' (trust gap); Locals = 'Revenue Leak' (ROI focus)",
+      "Run small hyperlocal ads highlighting 'no lock‑in, faster sites' when ready"
+    ]
+  },
   caseStudies: [
     {
       title: "Law Firm Speed Overhaul",
@@ -91,8 +134,8 @@ export const professionalServicesData: IndustryData = {
     primaryCtaText: "Speak With the Founder"
   },
   seo: {
-    title: "Position Digital — High-Performance Websites for Professional Services",
-    description: "We design and build blazing-fast, trust-driving websites for lawyers, accountants, consultants, and therapists.",
+    title: "Accountants-First Web Design | Position Digital",
+    description: "Accountants are our top focus. Premium, fast, trust-building sites. Strategy Sprint + Launch Build ($6k–$9.5k) + Care & Content.",
     keywords: ["professional services websites", "law firm web design", "accountant website design", "consultant web design", "therapist websites"]
   }
 };
