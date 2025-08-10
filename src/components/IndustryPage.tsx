@@ -46,14 +46,14 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
         <title>{data.seo.title}</title>
         <meta name="description" content={data.seo.description} />
         <meta name="keywords" content={data.seo.keywords.join(', ')} />
-        <link rel="canonical" href={`https://positiondigital.com${data.slug}`} />
+        <link rel="canonical" href={`${window.location.origin}${data.slug}`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Position Digital",
             "description": data.seo.description,
-            "url": `https://positiondigital.com${data.slug}`,
+            "url": `${window.location.origin}${data.slug}`,
             "sameAs": ["https://twitter.com/positiondigital"]
           })}
         </script>
@@ -297,7 +297,7 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="text-center shadow-accent border-0 bg-gradient-subtle">
+                  <Card className="text-center shadow-accent border-0 bg-gradient-subtle">
                 <CardContent className="p-12">
                   <div className="flex justify-center mb-6">
                     {[...Array(5)].map((_, i) => (
@@ -347,7 +347,7 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
         </section>
 
         {/* End CTA */}
-        <section className="py-20 bg-gradient-to-r from-primary to-primary-foreground text-primary-foreground">
+        <section className="py-20 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">

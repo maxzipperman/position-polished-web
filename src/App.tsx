@@ -18,6 +18,12 @@ import Consultants from "./pages/consultants";
 import Portfolio from "./pages/Portfolio";
 import Donate from "./pages/Donate";
 import Events from "./pages/Events";
+import Faith from "./pages/Faith";
+import Schools from "./pages/Schools";
+import YouthSports from "./pages/YouthSports";
+import Community from "./pages/Community";
+import ArtsCulture from "./pages/ArtsCulture";
+import ParksRec from "./pages/ParksRec";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +47,13 @@ const App = () => (
             <Route path="/local-businesses" element={<LocalBusinesses />} />
             <Route path="/nonprofits" element={<Nonprofits />} />
             <Route path="/creatives" element={<Creatives />} />
+            {/* Community-Focused Industry Pages */}
+            <Route path="/faith" element={<Faith />} />
+            <Route path="/schools" element={<Schools />} />
+            <Route path="/youth-sports" element={<YouthSports />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/arts-culture" element={<ArtsCulture />} />
+            <Route path="/parks-rec" element={<ParksRec />} />
             
             {/* Niche Landing Pages */}
             <Route path="/lawyers" element={<Lawyers />} />

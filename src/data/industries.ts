@@ -456,3 +456,208 @@ export const creativesData: IndustryData = {
     keywords: ["portfolio website design", "photographer website", "artist portfolio", "designer portfolio", "creative agency website"]
   }
 };
+
+export const faithData: IndustryData = {
+  industry: "Faith & Religious",
+  icon: "hand-heart",
+  slug: "/faith",
+  hero: {
+    headline: "A Digital Home for Your Church or Faith Community",
+    subheadline: "Sermons, groups, events, and giving—simple and welcoming.",
+    primaryCtaText: "Speak With the Founder",
+    secondaryCtaText: "See Examples",
+  },
+  whyMatters: [
+    "Members check the site for service times and groups.",
+    "Clear giving flows increase recurring support.",
+    "Welcoming design helps visitors feel at home.",
+  ],
+  proof: [
+    "+35% recurring giving after simplifying the flow",
+    "+40% group sign‑ups with clear ministries pages",
+    "1.1s LCP on mobile across campuses",
+  ],
+  servicesFocus: [
+    "Sermons/media archive",
+    "Groups/ministries pages",
+    "Online giving setup",
+    "Events calendar",
+    "Volunteer forms",
+  ],
+  valueProps: [
+    "Two-click mobile giving with Apple/Google Pay",
+    "Series-based sermon archive with audio/video",
+    "Simple groups directory and next steps",
+    "Child check-in info and safety details",
+  ],
+  caseStudies: [
+    { title: "Multi-campus Church Refresh", client: "Westside Community Church", challenge: "Confusing navigation and giving flow.", solution: "Clear next steps, simplified giving tiers.", outcome: "+28% giving in 90 days." },
+    { title: "Youth Ministry Microsite", client: "City Youth", challenge: "Low event attendance.", solution: "Mobile-first events w/ reminders.", outcome: "+45% RSVPs." },
+  ],
+  beforeAfter: [
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Sermon archive clarity boost." },
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Giving flow simplified." },
+  ],
+  testimonial: { quote: "Our site finally feels like our church.", author: "Mark H.", role: "Lead Pastor" },
+  faqs: [
+    { q: "Can you migrate sermons?", a: "Yes, we migrate recent series and set up an easy archive." },
+    { q: "Do you support Planning Center?", a: "We integrate Planning Center, Donorbox, and Stripe." },
+  ],
+  endCta: { heading: "Ready to Welcome More People?", subheading: "Make next steps and giving effortless.", primaryCtaText: "Get a Free Strategy Call" },
+  seo: { title: "Church & Faith Web Design | Position Digital", description: "Websites for churches and faith organizations with sermons, groups, events, and giving.", keywords: ["church websites","faith web design","online giving","sermon archive"] },
+};
+
+export const schoolsData: IndustryData = {
+  industry: "K-12 Schools & PTAs",
+  icon: "book-open",
+  slug: "/schools",
+  hero: {
+    headline: "Clear, Parent-Friendly School Websites",
+    subheadline: "Events, announcements, calendars, and forms—easy to update.",
+    primaryCtaText: "Speak With the Founder",
+    secondaryCtaText: "See Examples",
+  },
+  whyMatters: ["Parents need quick answers on mobile.", "Accessible design supports all families.", "Clear calendars reduce office calls."],
+  proof: ["-30% office calls after calendar revamp", "+22% volunteer signups", "1.2s LCP on budget devices"],
+  servicesFocus: ["Announcements & newsletters", "Events calendar", "Registration & forms", "Teacher pages", "Language access"],
+  valueProps: ["ADA-conscious layouts", "One-click translate ready", "Safe photo galleries", "PTA fundraising pages"],
+  caseStudies: [
+    { title: "District Calendar Overhaul", client: "Riverbend SD", challenge: "Scattered info.", solution: "Unified calendar + alerts.", outcome: "Parents report fewer missed events." },
+    { title: "PTA Fundraiser Microsite", client: "Northview PTA", challenge: "Confusing donate flow.", solution: "Preset tiers + mobile-first.", outcome: "+31% donations." },
+  ],
+  beforeAfter: [
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Cleaner announcements layout." },
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Parent-focused navigation." },
+  ],
+  testimonial: { quote: "Parents finally find things fast.", author: "Dana L.", role: "Principal" },
+  faqs: [
+    { q: "Do you handle translation?", a: "We set up one-click translate and structure content for clarity." },
+    { q: "How about teacher pages?", a: "We create a simple, uniform teacher page template." },
+  ],
+  endCta: { heading: "Make Your School Site Parent-Friendly", subheading: "Fewer calls, more engagement.", primaryCtaText: "Start a Conversation" },
+  seo: { title: "School Website Design | Position Digital", description: "K-12 school and PTA websites with calendars, announcements, and mobile-first access.", keywords: ["school websites","pta website","district site","school calendar"] },
+};
+
+export const youthSportsData: IndustryData = {
+  industry: "Youth Sports",
+  icon: "award",
+  slug: "/youth-sports",
+  hero: {
+    headline: "Websites for Leagues and Clubs",
+    subheadline: "Registration, schedules, rosters, and sponsor highlights—fast and simple.",
+    primaryCtaText: "Speak With the Founder",
+    secondaryCtaText: "See Examples",
+  },
+  whyMatters: ["Parents register on phones.", "Clear schedules reduce messages.", "Sponsors want visibility."],
+  proof: ["+50% on-time registrations", "Schedules viewed 5× more", "Sponsor clicks up 2×"],
+  servicesFocus: ["Online registration", "Season schedules", "Team pages & rosters", "Sponsor blocks", "Field status alerts"],
+  valueProps: ["Mobile-first registration", "Calendar sync", "Coach-friendly updates", "Sponsor display modules"],
+  caseStudies: [
+    { title: "League Registration Streamlined", client: "Metro Soccer", challenge: "Drop-offs at checkout.", solution: "Simplified form + payments.", outcome: "+38% completed regs." },
+    { title: "Sponsor Visibility", client: "Hills Baseball", challenge: "Sponsors underexposed.", solution: "Homepage placements.", outcome: "+2× sponsor clicks." },
+  ],
+  beforeAfter: [
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Cleaner schedule layout." },
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Frictionless registration." },
+  ],
+  testimonial: { quote: "Coaches and parents love the simplicity.", author: "Kim S.", role: "League Director" },
+  faqs: [
+    { q: "Do you integrate sports platforms?", a: "Yes—TeamSnap, SportsEngine, or custom forms with Stripe." },
+    { q: "Sponsor pages?", a: "We create tiered placements with tracking." },
+  ],
+  endCta: { heading: "Make Next Season Easier", subheading: "Less admin, more play.", primaryCtaText: "Get a Free Strategy Call" },
+  seo: { title: "Youth Sports Websites | Position Digital", description: "League and club websites with registration, schedules, and sponsor visibility.", keywords: ["sports websites","league registration","team pages"] },
+};
+
+export const communityData: IndustryData = {
+  industry: "Community Centers & Nonprofits",
+  icon: "users",
+  slug: "/community",
+  hero: {
+    headline: "Websites That Power Community Programs",
+    subheadline: "Events, volunteers, donations, and impact stories in one place.",
+    primaryCtaText: "Speak With the Founder",
+    secondaryCtaText: "See Examples",
+  },
+  whyMatters: ["Clear next steps drive action.", "Mobile-first matters for outreach.", "Trust grows with impact stories."],
+  proof: ["Volunteer signups doubled", "+180% monthly givers", "Bounce rate down 35%"],
+  servicesFocus: ["Donate + volunteer flows", "Events & programs", "Impact storytelling", "CRM integrations", "Accessibility"],
+  valueProps: ["2-click donate", "Recurring giving", "Shift scheduling", "Impact metrics blocks"],
+  caseStudies: [
+    { title: "Volunteer Portal", client: "Neighborhood Hub", challenge: "Manual scheduling.", solution: "Self-serve shifts.", outcome: "+3× capacity." },
+    { title: "Donation Uplift", client: "HelpLine", challenge: "Low conversion.", solution: "Simplified tiers.", outcome: "+70% donors." },
+  ],
+  beforeAfter: [
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Volunteer flow clarity." },
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Donation UX uplift." },
+  ],
+  testimonial: { quote: "Our impact is clearer and support is up.", author: "Alicia P.", role: "Program Director" },
+  faqs: [
+    { q: "Which CRMs do you support?", a: "Salesforce, Bloomerang, DonorPerfect, and more." },
+    { q: "Can we track impact?", a: "Yes, we set up metrics blocks and dashboards." },
+  ],
+  endCta: { heading: "Turn Passion into Action", subheading: "Make it easy to give, volunteer, and attend.", primaryCtaText: "Start Your Project" },
+  seo: { title: "Community Nonprofit Websites | Position Digital", description: "Community and nonprofit websites for donations, volunteers, and events.", keywords: ["nonprofit websites","volunteer signup","donations"] },
+};
+
+export const artsCultureData: IndustryData = {
+  industry: "Arts & Culture",
+  icon: "palette",
+  slug: "/arts-culture",
+  hero: {
+    headline: "Showcase Your Season and Grow Membership",
+    subheadline: "Events, ticket links, galleries, and member sign-ups.",
+    primaryCtaText: "Speak With the Founder",
+    secondaryCtaText: "See Examples",
+  },
+  whyMatters: ["Audiences plan on phones.", "Clear CTAs drive attendance.", "Support grows with storytelling."],
+  proof: ["Memberships up 25%", "+2× event RSVPs", "Gallery load times 5× faster"],
+  servicesFocus: ["Season/events pages", "Ticketing links", "Galleries & media", "Membership sign-up", "Sponsors"],
+  valueProps: ["Ultra-fast media", "Clear season schedule", "Donor tiers", "Sponsor showcases"],
+  caseStudies: [
+    { title: "Community Choir Growth", client: "City Voices", challenge: "Low awareness.", solution: "Season page + media.", outcome: "+2× attendees." },
+    { title: "Museum Supporters", client: "Heritage Museum", challenge: "Stagnant members.", solution: "Member tiers + stories.", outcome: "+25% memberships." },
+  ],
+  beforeAfter: [
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Faster galleries." },
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Clearer events." },
+  ],
+  testimonial: { quote: "Our season finally shines online.", author: "Renee T.", role: "Artistic Director" },
+  faqs: [
+    { q: "Ticketing integrations?", a: "Yes—Eventbrite, Square, or venue systems." },
+    { q: "Member portals?", a: "We set up member sign-ups and newsletters." },
+  ],
+  endCta: { heading: "Grow Your Audience", subheading: "Make every event easy to attend.", primaryCtaText: "Plan Your Season Site" },
+  seo: { title: "Arts & Culture Websites | Position Digital", description: "Websites for choirs, theater, bands, and museums with events and membership.", keywords: ["arts website","theater website","museum site"] },
+};
+
+export const parksRecData: IndustryData = {
+  industry: "Parks & Recreation",
+  icon: "map-pin",
+  slug: "/parks-rec",
+  hero: {
+    headline: "Simple Sites for Parks, Rec, and City Programs",
+    subheadline: "Programs, facility info, registration links, and alerts.",
+    primaryCtaText: "Speak With the Founder",
+    secondaryCtaText: "See Examples",
+  },
+  whyMatters: ["Residents need quick info.", "Mobile access is critical.", "Alerts reduce phone volume."],
+  proof: ["Registrations up 30%", "Fewer info calls", "Program pages viewed 3× more"],
+  servicesFocus: ["Program listings", "Registration links", "Facility pages", "Hours & closures", "Alerts"],
+  valueProps: ["Clear fees & forms", "Map & directions", "Accessible info", "Easy program search"],
+  caseStudies: [
+    { title: "Rec Program Signups", client: "North Parks", challenge: "Confusing registration.", solution: "Program index + links.", outcome: "+30% signups." },
+    { title: "Facility Info", client: "City Rec", challenge: "Frequent calls.", solution: "Hours + closures module.", outcome: "Call volume down 25%." },
+  ],
+  beforeAfter: [
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Facility info clarity." },
+    { beforeImage: "/placeholder.svg", afterImage: "/placeholder.svg", caption: "Program listings simplified." },
+  ],
+  testimonial: { quote: "Residents find what they need fast.", author: "Tom V.", role: "Parks Director" },
+  faqs: [
+    { q: "Do you handle alerts?", a: "We add a simple alert bar for closures and notices." },
+    { q: "Registration systems?", a: "We link to or embed your preferred system." },
+  ],
+  endCta: { heading: "Serve Residents Better", subheading: "Clear info, fewer calls.", primaryCtaText: "Talk With Us" },
+  seo: { title: "Parks & Recreation Websites | Position Digital", description: "Websites for parks districts and city programs with registration and facility info.", keywords: ["parks website","rec center site","city programs"] },
+};

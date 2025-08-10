@@ -16,10 +16,12 @@ const Navigation = () => {
   const location = useLocation();
 
   const industries = [
-    { name: 'Local Businesses', href: '/local-businesses' },
-    { name: 'Nonprofits & Religious', href: '/nonprofits' },
-    { name: 'Independent Creatives', href: '/creatives' },
-    { name: 'Professional Services', href: '/professional-services' },
+    { name: 'Faith & Religious', href: '/faith' },
+    { name: 'K-12 Schools & PTAs', href: '/schools' },
+    { name: 'Youth Sports', href: '/youth-sports' },
+    { name: 'Community Centers & Nonprofits', href: '/community' },
+    { name: 'Arts & Culture', href: '/arts-culture' },
+    { name: 'Parks & Recreation', href: '/parks-rec' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -55,7 +57,7 @@ const Navigation = () => {
             {/* Industries Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center space-x-1 transition-smooth hover:text-accent text-foreground">
-                <span>Industries</span>
+                <span>Who We Serve</span>
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-56">
@@ -128,7 +130,7 @@ const Navigation = () => {
                 Services
               </Link>
               <div className="px-3 py-2">
-                <div className="text-sm font-medium text-muted-foreground mb-2">Industries</div>
+                <div className="text-sm font-medium text-muted-foreground mb-2">Who We Serve</div>
                 {industries.map((industry) => (
                   <Link
                     key={industry.href}

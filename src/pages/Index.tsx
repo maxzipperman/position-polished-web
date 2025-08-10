@@ -16,8 +16,8 @@ const Index = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Websites for Nonprofits & Faith-Based Organizations | Position Digital</title>
-        <meta name="description" content="We build warm, accessible websites that amplify your mission, engage your community, and increase donations." />
+        <title>Websites for Community Organizations | Position Digital</title>
+        <meta name="description" content="We build warm, accessible websites that amplify your mission, engage your community, and increase donations and registrations." />
         <link rel="canonical" href="/" />
       </Helmet>
 
@@ -85,6 +85,35 @@ const Index = () => {
                 Make giving easy and secure with a frictionless, mobile-friendly donation process built to increase support.
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Industries We Serve */}
+      <section className="py-8 lg:py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <h2 className="mb-3">Industries We Serve</h2>
+            <p className="text-muted-foreground">We partner with community-focused groups to help them grow impact.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {[
+              { name: 'Faith & Religious', href: '/faith' },
+              { name: 'K-12 Schools & PTAs', href: '/schools' },
+              { name: 'Youth Sports', href: '/youth-sports' },
+              { name: 'Community Centers & Nonprofits', href: '/community' },
+              { name: 'Arts & Culture', href: '/arts-culture' },
+              { name: 'Parks & Recreation', href: '/parks-rec' },
+            ].map((s, i) => (
+              <Card key={i} className="hover-lift">
+                <CardHeader>
+                  <CardTitle className="text-lg">{s.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Link to={s.href} className="text-accent font-medium">Learn more →</Link>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
