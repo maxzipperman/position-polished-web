@@ -2,32 +2,32 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import logo from '@/assets/logo.svg';
-
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
-  const industries = [
-    { name: 'Faith & Religious', href: '/faith' },
-    { name: 'K-12 Schools & PTAs', href: '/schools' },
-    { name: 'Youth Sports', href: '/youth-sports' },
-    { name: 'Community Centers & Nonprofits', href: '/community' },
-    { name: 'Arts & Culture', href: '/arts-culture' },
-    { name: 'Parks & Recreation', href: '/parks-rec' },
-  ];
-
+  const industries = [{
+    name: 'Faith & Religious',
+    href: '/faith'
+  }, {
+    name: 'K-12 Schools & PTAs',
+    href: '/schools'
+  }, {
+    name: 'Youth Sports',
+    href: '/youth-sports'
+  }, {
+    name: 'Community Centers & Nonprofits',
+    href: '/community'
+  }, {
+    name: 'Arts & Culture',
+    href: '/arts-culture'
+  }, {
+    name: 'Parks & Recreation',
+    href: '/parks-rec'
+  }];
   const isActive = (path: string) => location.pathname === path;
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-3 group" aria-label="Position Digital home">
@@ -37,20 +37,10 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/"
-              className={`transition-smooth hover:text-accent ${
-                isActive('/') ? 'text-accent font-medium' : 'text-foreground'
-              }`}
-            >
+            <Link to="/" className={`transition-smooth hover:text-accent ${isActive('/') ? 'text-accent font-medium' : 'text-foreground'}`}>
               Home
             </Link>
-            <Link
-              to="/services"
-              className={`transition-smooth hover:text-accent ${
-                isActive('/services') ? 'text-accent font-medium' : 'text-foreground'
-              }`}
-            >
+            <Link to="/services" className={`transition-smooth hover:text-accent ${isActive('/services') ? 'text-accent font-medium' : 'text-foreground'}`}>
               Services
             </Link>
             
@@ -61,33 +51,18 @@ const Navigation = () => {
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-56">
-                {industries.map((industry) => (
-                  <DropdownMenuItem key={industry.href} asChild>
-                    <Link
-                      to={industry.href}
-                      className="w-full cursor-pointer"
-                    >
+                {industries.map(industry => <DropdownMenuItem key={industry.href} asChild>
+                    <Link to={industry.href} className="w-full cursor-pointer">
                       {industry.name}
                     </Link>
-                  </DropdownMenuItem>
-                ))}
+                  </DropdownMenuItem>)}
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link
-              to="/portfolio"
-              className={`transition-smooth hover:text-accent ${
-                isActive('/portfolio') ? 'text-accent font-medium' : 'text-foreground'
-              }`}
-            >
+            <Link to="/portfolio" className={`transition-smooth hover:text-accent ${isActive('/portfolio') ? 'text-accent font-medium' : 'text-foreground'}`}>
               Portfolio
             </Link>
-            <Link
-              to="/events"
-              className={`transition-smooth hover:text-accent ${
-                isActive('/events') ? 'text-accent font-medium' : 'text-foreground'
-              }`}
-            >
+            <Link to="/events" className={`transition-smooth hover:text-accent ${isActive('/events') ? 'text-accent font-medium' : 'text-foreground'}`}>
               Events
             </Link>
           </div>
@@ -95,7 +70,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
             <Button asChild size="sm" className="gradient-accent text-accent-foreground font-semibold" aria-label="Donate">
-              <Link to="/donate">Donate</Link>
+              
             </Button>
             <Button asChild size="sm" variant="outline" className="font-medium" aria-label="Get Started">
               <Link to="/contact">Get Started</Link>
@@ -103,57 +78,30 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground hover:text-accent transition-smooth"
-          >
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-foreground hover:text-accent transition-smooth">
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden border-t border-border">
+        {isOpen && <div className="md:hidden border-t border-border">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link
-                to="/"
-                className="block px-3 py-2 text-foreground hover:text-accent transition-smooth"
-                onClick={() => setIsOpen(false)}
-              >
+              <Link to="/" className="block px-3 py-2 text-foreground hover:text-accent transition-smooth" onClick={() => setIsOpen(false)}>
                 Home
               </Link>
-              <Link
-                to="/services"
-                className="block px-3 py-2 text-foreground hover:text-accent transition-smooth"
-                onClick={() => setIsOpen(false)}
-              >
+              <Link to="/services" className="block px-3 py-2 text-foreground hover:text-accent transition-smooth" onClick={() => setIsOpen(false)}>
                 Services
               </Link>
               <div className="px-3 py-2">
                 <div className="text-sm font-medium text-muted-foreground mb-2">Who We Serve</div>
-                {industries.map((industry) => (
-                  <Link
-                    key={industry.href}
-                    to={industry.href}
-                    className="block px-3 py-1 text-sm text-foreground hover:text-accent transition-smooth"
-                    onClick={() => setIsOpen(false)}
-                  >
+                {industries.map(industry => <Link key={industry.href} to={industry.href} className="block px-3 py-1 text-sm text-foreground hover:text-accent transition-smooth" onClick={() => setIsOpen(false)}>
                     {industry.name}
-                  </Link>
-                ))}
+                  </Link>)}
               </div>
-              <Link
-                to="/portfolio"
-                className="block px-3 py-2 text-foreground hover:text-accent transition-smooth"
-                onClick={() => setIsOpen(false)}
-              >
+              <Link to="/portfolio" className="block px-3 py-2 text-foreground hover:text-accent transition-smooth" onClick={() => setIsOpen(false)}>
                 Portfolio
               </Link>
-              <Link
-                to="/events"
-                className="block px-3 py-2 text-foreground hover:text-accent transition-smooth"
-                onClick={() => setIsOpen(false)}
-              >
+              <Link to="/events" className="block px-3 py-2 text-foreground hover:text-accent transition-smooth" onClick={() => setIsOpen(false)}>
                 Events
               </Link>
               <div className="pt-2 space-y-2">
@@ -169,11 +117,8 @@ const Navigation = () => {
                 </Button>
               </div>
             </div>
-          </div>
-        )}
+          </div>}
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navigation;
