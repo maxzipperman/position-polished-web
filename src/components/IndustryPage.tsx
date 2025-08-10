@@ -14,6 +14,8 @@ import { IndustryHero } from './IndustryHero';
 import { IndustryIcon } from './IndustryIcon';
 import { iconResolver } from '@/utils/iconResolver';
 import performanceMetrics from '@/assets/performance-metrics.jpg';
+import { ComparisonTable } from './ComparisonTable';
+import ROICalculator from './ROICalculator';
 
 interface IndustryPageProps {
   data: IndustryData;
@@ -187,6 +189,29 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
             </div>
           </div>
         </section>
+
+        {/* Us vs Competitors */}
+        {data.industry === 'Local Businesses' && (
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto animate-fade-in">
+                <ComparisonTable data={data.comparison!} />
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ROI Calculator */}
+        {data.industry === 'Local Businesses' && (
+          <section className="py-20 bg-muted/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-5xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-12">Your ROI vs Typical Retainers</h2>
+                <ROICalculator />
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Case Studies */}
         <section className="py-20 bg-muted/30">

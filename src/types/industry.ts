@@ -1,3 +1,17 @@
+export interface ComparisonRow {
+  label: string;
+  values: string[]; // One value per column
+  emphasis?: boolean;
+}
+
+export interface ComparisonTableData {
+  title?: string;
+  subtitle?: string;
+  columns: string[]; // e.g., ["Position Digital", "DIY Builders", "Traditional Agency"]
+  rows: ComparisonRow[];
+  footnote?: string;
+}
+
 export interface IndustryData {
   industry: string;
   slug: string;
@@ -45,4 +59,5 @@ export interface IndustryData {
     description: string;
     keywords: string[];
   };
+  comparison?: ComparisonTableData;
 }

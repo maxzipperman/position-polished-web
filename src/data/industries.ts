@@ -135,6 +135,24 @@ export const localBusinessData: IndustryData = {
     "Promotions/events module, easy to update",
     "$120/yr hosting, no platform fees"
   ],
+  comparison: {
+    title: "Why Local Businesses Choose Us",
+    subtitle: "Clear advantages over DIY builders and traditional retainers",
+    columns: ["Position Digital", "DIY Website Builders", "Traditional Agency Retainer"],
+    rows: [
+      { label: "Core Web Vitals pass on real devices", values: ["Yes", "No", "Partial"], emphasis: true },
+      { label: "Local SEO setup (GMB, schema, citations)", values: ["Yes", "Partial", "Yes"] },
+      { label: "Tap-to-call / directions above the fold", values: ["Yes", "Partial", "Yes"] },
+      { label: "Reviews integration + auto-ask flow", values: ["Yes", "No", "Partial"] },
+      { label: "Custom design (not a template)", values: ["Yes", "No", "Yes"] },
+      { label: "Ownership (no platform lock-in)", values: ["Yes", "No", "Partial"], emphasis: true },
+      { label: "Time to launch", values: ["2–4 weeks", "1–2 weeks", "8–12 weeks"] },
+      { label: "Upfront cost", values: ["$2–5k", "$0–$500", "$10–25k"] },
+      { label: "Ongoing fees", values: ["$120/yr hosting", "$25–$60/mo", "$2–5k/mo retainer"], emphasis: true },
+      { label: "Support", values: ["Founder-led", "Self-serve", "Account manager"] }
+    ],
+    footnote: "Costs are typical ranges; exact pricing depends on scope. Retainers shown are common for small local business agency contracts."
+  },
   caseStudies: [
     {
       title: "Restaurant Online Ordering",
