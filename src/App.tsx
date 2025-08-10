@@ -12,6 +12,9 @@ import ProfessionalServices from "./pages/ProfessionalServices";
 import LocalBusinesses from "./pages/LocalBusinesses";
 import Nonprofits from "./pages/Nonprofits";
 import Creatives from "./pages/Creatives";
+import Lawyers from "./pages/lawyers";
+import Accountants from "./pages/accountants";
+import Consultants from "./pages/consultants";
 
 const queryClient = new QueryClient();
 
@@ -33,10 +36,13 @@ const App = () => (
             <Route path="/nonprofits" element={<Nonprofits />} />
             <Route path="/creatives" element={<Creatives />} />
             
+            {/* Niche Landing Pages */}
+            <Route path="/lawyers" element={<Lawyers />} />
+            <Route path="/accountants" element={<Accountants />} />
+            <Route path="/consultants" element={<Consultants />} />
+            
             {/* Vanity URL Redirects */}
-            <Route path="/law-firms" element={<Navigate to="/professional-services" replace />} />
-            <Route path="/accountants" element={<Navigate to="/professional-services" replace />} />
-            <Route path="/consultants" element={<Navigate to="/professional-services" replace />} />
+            <Route path="/law-firms" element={<Navigate to="/lawyers" replace />} />
             <Route path="/therapists" element={<Navigate to="/professional-services" replace />} />
             <Route path="/restaurants" element={<Navigate to="/local-businesses" replace />} />
             <Route path="/retailers" element={<Navigate to="/local-businesses" replace />} />
