@@ -15,6 +15,7 @@ import Creatives from "./pages/Creatives";
 import Lawyers from "./pages/lawyers";
 import Accountants from "./pages/accountants";
 import Consultants from "./pages/consultants";
+import Portfolio from "./pages/Portfolio";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             
             {/* Industry Pages */}
             <Route path="/professional-services" element={<ProfessionalServices />} />
