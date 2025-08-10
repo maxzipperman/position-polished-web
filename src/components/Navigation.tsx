@@ -62,9 +62,8 @@ const Navigation = () => {
             <Link to="/portfolio" className={`transition-smooth hover:text-accent ${isActive('/portfolio') ? 'text-accent font-medium' : 'text-foreground'}`}>
               Portfolio
             </Link>
-            <Link to="/events" className={`transition-smooth hover:text-accent ${isActive('/events') ? 'text-accent font-medium' : 'text-foreground'}`}>
-              Events
-            </Link>
+            <Link to="/events" className={`transition-smooth hover:text-accent ${isActive('/events') ? 'text-accent font-medium' : 'text-foreground'}`}>Helpful Resources
+          </Link>
           </div>
 
           {/* CTA Button */}
