@@ -81,18 +81,21 @@ const Navigation = () => {
               Portfolio
             </Link>
             <Link
-              to="/about"
+              to="/events"
               className={`transition-smooth hover:text-accent ${
-                isActive('/about') ? 'text-accent font-medium' : 'text-foreground'
+                isActive('/events') ? 'text-accent font-medium' : 'text-foreground'
               }`}
             >
-              About
+              Events
             </Link>
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button asChild size="sm" className="gradient-accent text-accent-foreground font-medium">
+          <div className="hidden md:flex items-center gap-3">
+            <Button asChild size="sm" className="gradient-accent text-accent-foreground font-semibold" aria-label="Donate">
+              <Link to="/donate">Donate</Link>
+            </Button>
+            <Button asChild size="sm" variant="outline" className="font-medium" aria-label="Get Started">
               <Link to="/contact">Get Started</Link>
             </Button>
           </div>
@@ -145,14 +148,19 @@ const Navigation = () => {
                 Portfolio
               </Link>
               <Link
-                to="/about"
+                to="/events"
                 className="block px-3 py-2 text-foreground hover:text-accent transition-smooth"
                 onClick={() => setIsOpen(false)}
               >
-                About
+                Events
               </Link>
-              <div className="pt-4">
-                <Button asChild className="w-full gradient-accent text-accent-foreground">
+              <div className="pt-2 space-y-2">
+                <Button asChild className="w-full gradient-accent text-accent-foreground" aria-label="Donate">
+                  <Link to="/donate" onClick={() => setIsOpen(false)}>
+                    Donate
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" className="w-full" aria-label="Get Started">
                   <Link to="/contact" onClick={() => setIsOpen(false)}>
                     Get Started
                   </Link>
