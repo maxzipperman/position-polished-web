@@ -18,6 +18,7 @@ import Consultants from "./pages/consultants";
 import Portfolio from "./pages/Portfolio";
 import Donate from "./pages/Donate";
 import Events from "./pages/Events";
+import Resources from "./pages/Resources";
 import Faith from "./pages/Faith";
 import Schools from "./pages/Schools";
 import YouthSports from "./pages/YouthSports";
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/resources" element={<Resources />} />
             
             {/* Industry Pages */}
             <Route path="/professional-services" element={<ProfessionalServices />} />

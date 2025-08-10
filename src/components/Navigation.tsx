@@ -62,7 +62,7 @@ const Navigation = () => {
             <Link to="/portfolio" className={`transition-smooth hover:text-accent ${isActive('/portfolio') ? 'text-accent font-medium' : 'text-foreground'}`}>
               Portfolio
             </Link>
-            <Link to="/events" className={`transition-smooth hover:text-accent ${isActive('/events') ? 'text-accent font-medium' : 'text-foreground'}`}>Helpful Resources
+            <Link to="/resources" className={`transition-smooth hover:text-accent ${isActive('/resources') ? 'text-accent font-medium' : 'text-foreground'}`}>Helpful Resources
           </Link>
           </div>
 
@@ -100,8 +100,8 @@ const Navigation = () => {
               <Link to="/portfolio" className="block px-3 py-2 text-foreground hover:text-accent transition-smooth" onClick={() => setIsOpen(false)}>
                 Portfolio
               </Link>
-              <Link to="/events" className="block px-3 py-2 text-foreground hover:text-accent transition-smooth" onClick={() => setIsOpen(false)}>
-                Events
+              <Link to="/resources" className="block px-3 py-2 text-foreground hover:text-accent transition-smooth" onClick={() => setIsOpen(false)}>
+                Helpful Resources
               </Link>
               <div className="pt-2 space-y-2">
                 <Button asChild className="w-full gradient-accent text-accent-foreground" aria-label="Donate">
