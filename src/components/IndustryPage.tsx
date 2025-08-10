@@ -11,6 +11,7 @@ import { IndustryData } from '@/types/industry';
 import { FounderCTA } from './FounderCTA';
 import { AnimatedStats } from './AnimatedStats';
 import { IndustryHero } from './IndustryHero';
+import { IndustryIcon } from './IndustryIcon';
 import performanceMetrics from '@/assets/performance-metrics.jpg';
 
 interface IndustryPageProps {
@@ -63,6 +64,7 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
           subheadline={data.hero.subheadline}
           primaryCtaText={data.hero.primaryCtaText}
           secondaryCtaText={data.hero.secondaryCtaText}
+          iconName={data.icon}
         />
 
         {/* Why This Matters */}
@@ -74,8 +76,27 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
                 {data.whyMatters.map((point, index) => (
                   <Card key={index} className="border-0 shadow-sm">
                     <CardContent className="p-6">
-                      <CheckCircle className="h-8 w-8 text-primary mb-4" />
+                      <IndustryIcon name={data.icon} className="h-8 w-8 text-primary mb-4" />
                       <p className="text-muted-foreground">{point}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Client-Centric Value */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">Client-Centric Value for {data.industry}</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {(data.valueProps ?? data.servicesFocus).map((val, idx) => (
+                  <Card key={idx} className="border-0 shadow-sm">
+                    <CardContent className="p-6">
+                      <IndustryIcon name={data.icon} className="h-6 w-6 text-primary mb-3" />
+                      <p className="text-sm">{val}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -126,6 +147,25 @@ export const IndustryPage = ({ data }: IndustryPageProps) => {
             </div>
           </div>
         </section>
+
+        {/* Who We Serve */}
+        {data.subProfessions?.length ? (
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-12">Who We Serve</h2>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {data.subProfessions!.map((sp, idx) => (
+                    <Card key={idx} className="p-8 text-center border-0 shadow-sm hover-lift transition-smooth">
+                      <IndustryIcon name={sp.icon || data.icon} className="h-10 w-10 text-primary mx-auto mb-4" />
+                      <div className="text-2xl md:text-3xl font-bold">{sp.name}</div>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         {/* Before/After Showcase */}
         <section id="case-studies" className="py-20">

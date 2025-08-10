@@ -2,6 +2,7 @@ import { IndustryData } from '@/types/industry';
 
 export const professionalServicesData: IndustryData = {
   industry: "Professional Services",
+  icon: "gavel",
   slug: "/professional-services",
   vanityAliases: ["/law-firms", "/accountants", "/consultants", "/therapists"],
   hero: {
@@ -26,6 +27,16 @@ export const professionalServicesData: IndustryData = {
     "Full redesigns with abstract, modern visuals",
     "Compliance-minded builds for regulated fields",
     "Lead capture integrations (Calendly, email sign-up)"
+  ],
+  valueProps: [
+    "Ethics-safe layouts for attorneys (disclaimers, no misleading claims)",
+    "Trust signals that convert: bios, bar admissions, case results",
+    "Practice-area page architecture that ranks and converts",
+    "Performance tuned for mobile (sub-1.5s LCP on real devices)",
+    "Service/FAQ schema for richer search results",
+    "Calendly/Clio/Microsoft Bookings intake flows",
+    "ADA-conscious, WCAG 2.1-friendly design",
+    "No plugins = no maintenance retainers"
   ],
   caseStudies: [
     {
@@ -88,6 +99,7 @@ export const professionalServicesData: IndustryData = {
 
 export const localBusinessData: IndustryData = {
   industry: "Local Businesses",
+  icon: "building2",
   slug: "/local-businesses",
   vanityAliases: ["/restaurants", "/retailers", "/service-providers"],
   hero: {
@@ -112,6 +124,16 @@ export const localBusinessData: IndustryData = {
     "Online ordering and reservation systems",
     "Location and hours management",
     "Customer review integration"
+  ],
+  valueProps: [
+    "Tap-to-call and tap-for-directions above the fold",
+    "Live hours + holiday closures synced to Google",
+    "Menu, services, or booking in two clicks",
+    "Auto-ask and showcase 5-star reviews",
+    "LocalBusiness schema + source-tagged conversions",
+    "Photo galleries that load instantly",
+    "Promotions/events module, easy to update",
+    "$120/yr hosting, no platform fees"
   ],
   caseStudies: [
     {
@@ -174,6 +196,7 @@ export const localBusinessData: IndustryData = {
 
 export const nonprofitData: IndustryData = {
   industry: "Nonprofits",
+  icon: "heart",
   slug: "/nonprofits",
   vanityAliases: ["/charities", "/foundations", "/ngo"],
   hero: {
@@ -198,6 +221,16 @@ export const nonprofitData: IndustryData = {
     "Volunteer management and event registration",
     "Grant application and impact reporting",
     "Accessibility compliance (WCAG 2.1)"
+  ],
+  valueProps: [
+    "2-click donate with Apple/Google Pay",
+    "Recurring + campaign-based giving options",
+    "Impact storytelling blocks (metrics, outcomes)",
+    "Volunteer signup with shift scheduling",
+    "CRM sync (Salesforce/DonorPerfect/Bloomerang)",
+    "WCAG 2.1 AA accessibility standards",
+    "Donor receipts & finance-friendly exports",
+    "No platform tax — keep more of each gift"
   ],
   caseStudies: [
     {
@@ -260,6 +293,7 @@ export const nonprofitData: IndustryData = {
 
 export const creativesData: IndustryData = {
   industry: "Creatives",
+  icon: "scissors",
   slug: "/creatives",
   vanityAliases: ["/artists", "/designers", "/photographers", "/agencies"],
   hero: {
@@ -284,6 +318,24 @@ export const creativesData: IndustryData = {
     "Client portal and project management integration",
     "SEO optimization for creative keywords",
     "Contact and booking form optimization"
+  ],
+  valueProps: [
+    "Visual-first layouts that let your work sell",
+    "Ultra-fast galleries (lazy-loaded images/video)",
+    "Private/proofing client galleries",
+    "Booking/inquiry flows with pre-qualification",
+    "Services & package modules you can update",
+    "SEO tuned for niche + location",
+    "IG/TikTok embeds without slowing the site",
+    "Own your site — no templates, no monthly fee"
+  ],
+  subProfessions: [
+    { name: "Hair Stylists", icon: "scissors" },
+    { name: "Photographers", icon: "camera" },
+    { name: "Designers", icon: "pen-tool" },
+    { name: "Makeup Artists", icon: "brush" },
+    { name: "Videographers", icon: "video" },
+    { name: "Illustrators", icon: "palette" }
   ],
   caseStudies: [
     {

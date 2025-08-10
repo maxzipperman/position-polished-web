@@ -11,6 +11,9 @@ export interface IndustryData {
   whyMatters: string[];
   proof: string[];
   servicesFocus: string[];
+  icon?: string;
+  valueProps?: string[];
+  subProfessions?: { name: string; icon: string }[];
   caseStudies: {
     title: string;
     client: string;

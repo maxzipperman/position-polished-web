@@ -2,6 +2,7 @@ import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play } from 'lucide-react';
+import { IndustryIcon } from './IndustryIcon';
 
 interface IndustryHeroProps {
   industry: string;
@@ -10,6 +11,7 @@ interface IndustryHeroProps {
   primaryCtaText: string;
   secondaryCtaText: string;
   backgroundImage?: string;
+  iconName?: string;
 }
 
 export const IndustryHero = ({ 
@@ -18,7 +20,8 @@ export const IndustryHero = ({
   subheadline, 
   primaryCtaText, 
   secondaryCtaText,
-  backgroundImage 
+  backgroundImage,
+  iconName
 }: IndustryHeroProps) => {
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -45,7 +48,8 @@ export const IndustryHero = ({
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <Badge variant="outline" className="mb-6 text-primary border-primary/20 hover-scale transition-smooth">
+          <Badge variant="outline" className="mb-6 text-primary border-primary/20 hover-scale transition-smooth inline-flex items-center gap-2">
+            {iconName && <IndustryIcon name={iconName} className="h-4 w-4" />}
             {industry}
           </Badge>
           
