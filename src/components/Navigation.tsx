@@ -68,9 +68,6 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <Button asChild size="sm" className="gradient-accent text-accent-foreground font-semibold" aria-label="Donate">
-              <Link to="/donate">Donate</Link>
-            </Button>
             <Button asChild size="sm" variant="outline" className="font-medium" aria-label="Get Started">
               <Link to="/contact">Get Started</Link>
             </Button>
@@ -104,11 +101,6 @@ const Navigation = () => {
                 Helpful Resources
               </Link>
               <div className="pt-2 space-y-2">
-                <Button asChild className="w-full gradient-accent text-accent-foreground" aria-label="Donate">
-                  <Link to="/donate" onClick={() => setIsOpen(false)}>
-                    Donate
-                  </Link>
-                </Button>
                 <Button asChild variant="outline" className="w-full" aria-label="Get Started">
                   <Link to="/contact" onClick={() => setIsOpen(false)}>
                     Get Started
