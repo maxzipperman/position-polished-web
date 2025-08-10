@@ -69,7 +69,7 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
             <Button asChild size="sm" className="gradient-accent text-accent-foreground font-semibold" aria-label="Donate">
-              
+              <Link to="/donate">Donate</Link>
             </Button>
             <Button asChild size="sm" variant="outline" className="font-medium" aria-label="Get Started">
               <Link to="/contact">Get Started</Link>
