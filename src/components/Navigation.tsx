@@ -9,6 +9,8 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
+import logo from '@/assets/logo.svg';
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -26,9 +28,9 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="text-xl font-bold text-primary">
-            Position Digital
+          <Link to="/" className="flex items-center space-x-3 group" aria-label="Position Digital home">
+            <img src={logo} alt="Position Digital logo" className="h-8 w-8" loading="eager" />
+            <span className="text-xl font-bold text-foreground group-hover:text-accent transition-smooth">Position Digital</span>
           </Link>
 
           {/* Desktop Navigation */}

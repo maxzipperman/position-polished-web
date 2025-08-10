@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import logo from '@/assets/logo.svg';
 
 const Footer = () => {
   const industries = [
@@ -16,7 +17,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold mb-4">Position Digital</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <img src={logo} alt="Position Digital logo" className="h-8 w-8" loading="lazy" />
+              <h3 className="text-xl font-bold">Position Digital</h3>
+            </div>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               Boutique consultancy creating high-performance, custom websites with strategic messaging that converts.
             </p>
